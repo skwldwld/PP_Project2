@@ -1,3 +1,11 @@
+<?php
+  $name = $_POST['name'];
+  $studentid =$_POST['studentid'];
+  $phonenumber =$_POST['phonenumber'];
+  $email =$_POST['email'];
+  $rc =$_POST['rc'];
+  $major =$_POST['major'];
+?>
 
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
@@ -182,104 +190,133 @@
             <form class="needs-validation" novalidate>
               <div class="row g-3">
 
-                <div class="col-sm-6">
-                  <label for = "uname" class="form-label">Name</label>
-                  <input type = "text" class = "form-control" id = "uname" name = "uname" placeholder = "" value = "" required><br>
+                <form name = "form1" action = "from1_ok.php" onsubmit = "return validateForm()" method = "post">
 
-                  <div class="invalid-feedback">
-                    Valid name is required.
-                  </div>
-                </div>
-
-                <div class="col-sm-6">
-                  <label for = "studentid" class="form-label">Student ID</label>
-                  <input type = "text" class = "form-control" id = "studentid" name = "studentid" placeholder = "" value = "" required><br>
-                  <div class="invalid-feedback">
-                    Your studentid is required.
-                  </div>
-                </div>
-
-                <div class="col-12">
-                  <label for = "phonenumber" class="form-label">Phone Number</label>
-                  <input type = "text" class = "form-control" id = "phonenumber" name = "phonenumber" placeholder = "" value = "" required><br>
-                  <div class="invalid-feedback">
-                    Your phone number is required.
-                  </div>
-                </div>
-
-                <div class="col-12">
-                  <label for="email" class="form-label">Email <span class="text-body-secondary">(Optional)</span></label>
-                  <input type="email" class="form-control" id="email" placeholder="you@example.com"><br>
-                  <div class="invalid-feedback">
-                    Please enter a valid email address.
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <label for="rc" class="form-label">RC</label>
-                  <select class="form-select" id="state" required>
-                    <option value="">Choose...</option>
-                    <option>손양원</option>
-                    <option>열송학사</option>
-                    <option>장기려</option>
-                    <option>카이퍼</option>
-                    <option>토레이</option>
-                    <option>카마이클</option>
-                  </select>
-                  <div class="invalid-feedback">
-                    Please provide a valid state.
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <label for="major" class="form-label">Major</label>
-                  <select class="form-select" id="major" required>
-                    <option value="">Choose...</option>
-                    <option>글로벌리더십학부</option>
-                    <option>국제어문학부</option>
-                    <option>경영경제학부</option>
-                    <option>법학부</option>
-                    <option>커뮤니케이션학부</option>
-                    <option>공간환경시스템학부</option>
-                    <option>기계제어공학부</option>
-                    <option>콘텐츠융합디자인학부</option>
-                    <option>생명과학부</option>
-                    <option>전산전자공학부</option>
-                    <option>상담심리사회복지학부</option>
-                    <option>ICT창업학부</option>
-                    <option>창의융합교육원</option>
-                    <option>AI 교육원</option>
-                    <option>신앙 교육원</option>
-                  </select><br>
-                  <div class="invalid-feedback">
-                    Please select a valid major.
-                  </div>
-                </div>
-
-                <div class = "col-3">
-                  <label for = "detail" class = "form-label">Date</label><br>
-                  <input type = 'date' class = "form-control" min = '2022-01-01' max = '2023-12-31' name ='fromdata'>
-                </div>
                 
+                  <div class="col-sm-6">
+                    <label for = "name" class="form-label">Name</label>
+                    <input type = "text" class = "form-control" id = "name" name = "name" placeholder = "" value = "" required><br>
 
-                <div class = "col-9">
-                  <label for="detail" class="form-label">Content</label>
-                  <input type="text" class="form-control" id="detail"
-                   placeholder="Please enter the details of the counseling you would like to receive." required><br><br>
-                  <div class="invalid-feedback">
-                    Counseling detail is required.
+                    <div class="invalid-feedback">
+                      Valid name is required.
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <label for = "studentid" class="form-label">Student ID</label>
+                    <input type = "text" class = "form-control" id = "studentid" name = "studentid" placeholder = "" value = "" required><br>
+                    <div class="invalid-feedback">
+                      Your studentid is required.
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <label for = "phonenumber" class="form-label">Phone Number</label>
+                    <input type = "text" class = "form-control" id = "phonenumber" name = "phonenumber" placeholder = "" value = "" required><br>
+                    <div class="invalid-feedback">
+                      Your phone number is required.
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="email" class="form-label">Email <span class="text-body-secondary">(Optional)</span></label>
+                    <input type="email" class="form-control" id="email" placeholder="you@example.com"><br>
+                    <div class="invalid-feedback">
+                      Please enter a valid email address.
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="rc" class="form-label">RC</label>
+                    <select class="form-select" id="state" required>
+                      <option value="">Choose...</option>
+                      <option>손양원</option>
+                      <option>열송학사</option>
+                      <option>장기려</option>
+                      <option>카이퍼</option>
+                      <option>토레이</option>
+                      <option>카마이클</option>
+                    </select>
+                    <div class="invalid-feedback">
+                      Please provide a valid state.
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="major" class="form-label">Major</label>
+                    <select class="form-select" id="major" required>
+                      <option value="">Choose...</option>
+                      <option>글로벌리더십학부</option>
+                      <option>국제어문학부</option>
+                      <option>경영경제학부</option>
+                      <option>법학부</option>
+                      <option>커뮤니케이션학부</option>
+                      <option>공간환경시스템학부</option>
+                      <option>기계제어공학부</option>
+                      <option>콘텐츠융합디자인학부</option>
+                      <option>생명과학부</option>
+                      <option>전산전자공학부</option>
+                      <option>상담심리사회복지학부</option>
+                      <option>ICT창업학부</option>
+                      <option>창의융합교육원</option>
+                      <option>AI 교육원</option>
+                      <option>신앙 교육원</option>
+                    </select><br>
+                    <div class="invalid-feedback">
+                      Please select a valid major.
+                    </div>
+                  </div>
+
+                  <div class = "col-3">
+                    <label for = "detail" class = "form-label">Date</label><br>
+                    <input type = 'date' class = "form-control" min = '2022-01-01' max = '2023-12-31' name ='fromdata'>
+                  </div>
+                  
+
+                  <div class = "col-9">
+                    <label for="detail" class="form-label">Content</label>
+                    <input type="text" cols='20' rows='5' class="form-control" id="detail"
+                    placeholder="Please enter the details of the counseling you would like to receive." required><br><br>
+                    <div class="invalid-feedback">
+                      Counseling detail is required.
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <hr class="my-4">
+                <hr class="my-4">
 
-              <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="same-address">
-                <label class="form-check-label" for="same-address">Do you consent to the processing and collection of personal information?</label>
-              </div>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="same-address">
+                  <label class="form-check-label" for="same-address">Do you consent to the processing and collection of personal information?</label>
+                </div>
+              </form>
 
               <hr class="my-4"><br>
+
+              <!-- <script>
+                function valideFrom() {
+                  var uname = document.form1.uname;
+                  if(uname.value == "") {
+                    alert("Your name is required.");
+                    uname.focus();
+                    return false;
+                  }
+
+                  var studentid = document.form1.studentid;
+                  if(studentid.value == "") {
+                    alert("Your student ID is required.");
+                    studentid.focus();
+                    return false;
+                  }
+
+                  var phonenumber= document.form1.phonenumber;
+                  if(phonenumber.value == "") {
+                    alert("Your phone number is required.");
+                    studentid.focus();
+                    return false;
+                  } 
+                }
+              </script> -->
 
               <ul class="pagination justify-content-center">
                 <button class="w-100 btn btn-outline-primary btn-lg" type="reset">Reset</button>
