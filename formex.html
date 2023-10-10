@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+    <h3>사용자 정보 입력</h3>
+    <form action = "form_ok.php" method = "post">
+        <input type = 'date' min = '2017-01-01' max = '2023-12-31' name ='fromdata'><br>
+
+        <label for = "uname">이름:</label>
+        <input type = "text" id = "uname" name = "uname" placeholder = '이름을 입력'><br>
+        
+        <label for = "studentnumber">학번:</label>
+        <input type = "text" id = "studentnumber" name = "studentnumber" placeholder = '학번을 입력'><br>
+
+        <label for = "gender">성별:</label>
+        <input type = "radio" id = "gender1" name = "gender" value = "M" checked>남
+        <input type = "radio" id = "gender2" name = "gender" value = "F" checked>여 <br>
+
+        <label for = "rc">RC:</label>
+        <input type = "checkbox" id = "rc1" name = "rc1" value = "1" checked>손양원
+        <input type = "checkbox" id = "rc2" name = "rc2" value = "2">카이퍼
+        <input type = "checkbox" id = "rc3" name = "rc3" value = "3">장기려<br>
+        <input type = "checkbox" id = "rc4" name = "rc4" value = "4">토레이
+        <input type = "checkbox" id = "rc5" name = "rc5" value = "5">열송학사
+        <input type = "checkbox" id = "rc6" name = "rc6" value = "6">카마이클
+        <br>
+        내용:<br>
+        <textarea name = 'content' cols = 30 rows = 5 placeholder= '상담 받을 내용 입력'></textarea>
+
+
+        <br><br>
+
+        <input type = "submit" value = "저장"> <input type = "reset" value = "새로입력">
+    </form>
+    
+</body>
+</html>
+
+
+<div class="col-md-5 col-lg-4 order-md-last">
+    <h4 class="d-flex justify-content-between align-items-center mb-3">
+      <span class="text-primary">Your cart</span>
+      <span class="badge bg-primary rounded-pill">3</span>
+    </h4>
+    <ul class="list-group mb-3">
+      <li class="list-group-item d-flex justify-content-between lh-sm">
+        <div>
+          <h6 class="my-0">Product name</h6>
+          <small class="text-body-secondary">Brief description</small>
+        </div>
+        <span class="text-body-secondary">$12</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between lh-sm">
+        <div>
+          <h6 class="my-0">Second product</h6>
+          <small class="text-body-secondary">Brief description</small>
+        </div>
+        <span class="text-body-secondary">$8</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between lh-sm">
+        <div>
+          <h6 class="my-0">Third item</h6>
+          <small class="text-body-secondary">Brief description</small>
+        </div>
+        <span class="text-body-secondary">$5</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between bg-body-tertiary">
+        <div class="text-success">
+          <h6 class="my-0">Promo code</h6>
+          <small>EXAMPLECODE</small>
+        </div>
+        <span class="text-success">−$5</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between">
+        <span>Total (USD)</span>
+        <strong>$20</strong>
+      </li>
+    </ul>
+
+    <form class="card p-2">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Promo code">
+        <button type="submit" class="btn btn-secondary">Redeem</button>
+      </div>
+    </form>
+  </div>
+
+<div class="col-sm-6">
+    <label for="username" class="form-label">Username</label>
+    <div class="input-group has-validation">
+      <span class="input-group-text">@</span>
+      <input type="text" class="form-control" id="username" placeholder="Username" required>
+    <div class="invalid-feedback">
+        Your username is required.
+      </div>
+    </div>
+  </div>
+
+
+  <img class="d-block mx-auto mb-4" src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
